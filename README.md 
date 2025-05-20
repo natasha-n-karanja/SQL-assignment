@@ -1,0 +1,21 @@
+# Advanced SQL Operations Project
+
+## Database Schema
+Three tables:
+- `customers` (customer name, customer email, customer address)
+- `products` (product info)
+- `orders` (tracks purchases)
+-`bank_accounts` (for fund transfer transaction)
+
+## SQL Queries
+1. Customers with no orders
+2. Total revenue
+3. Top 5 products by revenue
+4. Update customer address
+5. Transaction for transferring funds
+
+## Setup Instructions
+1. Use PostgreSQL.
+2. Run the provided `CREATE TABLE` scripts.
+3. Insert data into each table.
+4. Run the queries to test if they work.
