@@ -1,2 +1,5 @@
 --CUSTOMERS TABLE
 CREATE TABLE customers( customer_id SERIAL PRIMARY KEY, name VARCHAR(100), email VARCHAR(100) UNIQUE adrdress TEXT);
+
+--PRODUCTS TABLE
+CREATE TABLE products (product_id SERIAL PRIMARY KEY, name VARCHAR(100) price FLOAT);
