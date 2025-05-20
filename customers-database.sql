@@ -9,3 +9,6 @@ CREATE TABLE orders (order_id SERIAL PRIMARY KEY, customer_id INT, product_id IN
 
 --TOTAL REVENUE GENERATED FROM ORDERS
 SELECT SUM(p.price * o.quantity) AS total_revenue FROM orders o JOIN products p ON o.product_id = p.product_id;
+
+--PRODUCTS WITH THE HIGHEST SALES REVENUE
+SELECT p.name, SUM(p.price * o.quantity) AS revenue FROM orders o JOIN products p ON o.product_id = p.product_id GROUP BY p.name ORDER BY revenue DESC LIMIT 5;
