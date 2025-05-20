@@ -17,3 +17,6 @@ SELECT p.name, SUM(p.price * o.quantity) AS revenue FROM orders o JOIN products 
 UPDATE customers SET name = 'Jr' WHERE customer_id = 1;
 UPDATE customers SET email = 'bobby@gmail.com' WHERE customer_id = 2;
 UPDATE customers SET address = 'section 58' WHERE customer_id = 3;
+
+--TRANSACTION TO TRANSFER FUNDS BETWEEN TWO ACCOUNTS
+CREATE TABLE bank_accounts (account_id SERIAL PRIMARY KEY, customer_id INT, balance FLOAT);
