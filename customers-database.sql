@@ -20,3 +20,14 @@ UPDATE customers SET address = 'section 58' WHERE customer_id = 3;
 
 --TRANSACTION TO TRANSFER FUNDS BETWEEN TWO ACCOUNTS
 CREATE TABLE bank_accounts (account_id SERIAL PRIMARY KEY, customer_id INT, balance FLOAT);
+
+-->transcations
+BEGIN;
+
+-- Subtract from sender
+UPDATE bank_accounts SET balance = balance - 100 WHERE account_id = 1;
+
+-- Add to receiver
+UPDATE bank_accounts SET balance = balance + 100 WHERE account_id = 2; 
+
+COMMIT;
